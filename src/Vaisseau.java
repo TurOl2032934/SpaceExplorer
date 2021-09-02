@@ -3,17 +3,19 @@ import java.util.ArrayList;
 public class Vaisseau {
 
     //Attributs
-    private int pv;
-    private int carburant;
-    private ArrayList[] inventaire;
+    private int pv = 100;
+    private int carburant = 1000;
+    private final ArrayList<String> nomObjet = new ArrayList<String>();
+    private ArrayList<ObjetVaisseau> objetVaisseau = new ArrayList<ObjetVaisseau>();
 
-    public Vaisseau(){
+    public Vaisseau() {
 
     }
 
     //Méthodes
 
     public int getPv() {
+
         return pv;
     }
 
@@ -29,12 +31,12 @@ public class Vaisseau {
         this.carburant = carburant;
     }
 
-    public ArrayList[] getInventaire() {
-        return inventaire;
+    public ArrayList<ObjetVaisseau> getInventaire() {
+        return objetVaisseau;
     }
 
-    public void setInventaire(ArrayList[] inventaire) {
-        this.inventaire = inventaire;
+    public void setInventaire(ArrayList<ObjetVaisseau> inventaire) {
+        this.objetVaisseau = inventaire;
     }
 }
 
